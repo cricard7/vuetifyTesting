@@ -1,0 +1,61 @@
+notes
+
+example typeahead
+
+
+new Vue({
+  el: '#app',
+  data () {
+    return {
+      a1: null,
+      statesInfo: [{
+       name: "arkansaw"
+      },
+                  {name: "winnipeg"}]
+    }
+  },
+  computed:{
+   states: function() {
+     var allStates = [];
+     this.statesInfo.forEach(function (state){
+       
+       allStates.push(state.name);
+     });
+     
+     
+     return allStates;
+   }
+    
+  },
+  watch: {
+  a1: function(){
+    alert(this.a1);
+  }
+}
+})
+
+
+
+<div id="app">
+  <v-app id="inspire">
+    <v-card color="grey lighten-4" flat>
+      <v-card-text>
+        <v-container fluid>
+          <v-layout row wrap>
+            <v-flex xs12 sm6>
+              <v-subheader v-text="'Autocomplete'"></v-subheader>
+            </v-flex>
+            <v-flex xs12 sm6>
+              <v-select
+                v-bind:items="states"
+                v-model="a1"
+                label="Select"
+                autocomplete
+              ></v-select>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-card-text>
+    </v-card>
+  </v-app>
+</div>
