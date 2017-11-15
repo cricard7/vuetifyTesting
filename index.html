@@ -97,15 +97,15 @@
 
 					<v-container fluid grid-list-md>
 						<v-layout row wrap>
-							<v-flex md6 offset-md3>
+							<v-flex md8 offset-md2>
 
 
 
 
-								<v-card dark class="regimenSearchBox" color="cyan">
+								<v-card class="regimenSearchBox mb-5">
 									<v-card-title primary-title>
 										<div class="headline">
-											Regimen Search by {{searchTypeSelected}}
+											Regimen Search
 										</div>
 									</v-card-title>
 									<v-card-text>
@@ -114,10 +114,11 @@
 										<v-container fluid grid-list-md>
 											<v-layout row wrap>
 												<v-flex md6>
+													Search By:
 													<v-radio-group v-model="searchTypeSelected" column>
-														<v-radio label="Regimen Name" value="Regimen Name" color="green darken-3"></v-radio>
-														<v-radio label="Drug" value="Drug" color="red"></v-radio>
-														<v-radio label="DSG" value="DSG" color="purple"></v-radio>
+														<v-radio label="Regimen Name" value="Regimen Name" color="light-blue"></v-radio>
+														<v-radio label="Drug" value="Drug" color="light-blue"></v-radio>
+														<v-radio label="DSG" value="DSG" color="light-blue"></v-radio>
 													</v-radio-group>
 												</v-flex>
 											</v-layout>
@@ -140,44 +141,48 @@
 					<v-container grid-list-md fluid>
 						<v-layout column>
 
-							<v-flex md8 offset-md2>
+							<v-flex md6 offset-md3>
 
 								<v-card class="regimenCard">
-									<v-card-title primary-title>
-										<div class="headline">
-											DSG - [Regimen Name]
-										</div>
-									</v-card-title>
+									<v-toolbar color="light-blue" dark>
+
+										<v-toolbar-title>DSG - [Regimen Name]</v-toolbar-title>
+										<v-spacer></v-spacer>
+
+
+									</v-toolbar>
+
+
 									<v-card-text>
 
-									
-												
-												<v-list two-line subheader>
-													<v-subheader inset>Document</v-subheader>
-													<v-list-tile avatar @click="">
-														<v-list-tile-avatar>
-															<v-icon>assignment</v-icon>
-														</v-list-tile-avatar>
-														<v-list-tile-content>
-															<v-list-tile-title>Regimen Reference Order</v-list-tile-title>
-															<v-list-tile-sub-title>ASdkdsjfkl</v-list-tile-sub-title>
-														</v-list-tile-content>
-
-													</v-list-tile>
-													
-													<v-list-tile avatar @click="">
-														<v-list-tile-avatar>
-															<v-icon>dashboard</v-icon>
-														</v-list-tile-avatar>
-														<v-list-tile-content>
-															<v-list-tile-title>Triage Monitoring Form</v-list-tile-title>
-															<v-list-tile-sub-title>asdfdsf</v-list-tile-sub-title>
-														</v-list-tile-content>
-
-													</v-list-tile>
 
 
-												</v-list>
+										<v-list two-line subheader>
+											<v-subheader inset>Document</v-subheader>
+											<v-list-tile avatar @click="">
+												<v-list-tile-avatar>
+													<v-icon>assignment</v-icon>
+												</v-list-tile-avatar>
+												<v-list-tile-content>
+													<v-list-tile-title>Regimen Reference Order</v-list-tile-title>
+													<v-list-tile-sub-title>ASdkdsjfkl</v-list-tile-sub-title>
+												</v-list-tile-content>
+
+											</v-list-tile>
+
+											<v-list-tile avatar @click="">
+												<v-list-tile-avatar>
+													<v-icon>dashboard</v-icon>
+												</v-list-tile-avatar>
+												<v-list-tile-content>
+													<v-list-tile-title>Triage Monitoring Form</v-list-tile-title>
+													<v-list-tile-sub-title>asdfdsf</v-list-tile-sub-title>
+												</v-list-tile-content>
+
+											</v-list-tile>
+
+
+										</v-list>
 
 
 										<!-- Regimen Reference Orders  -->
